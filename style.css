@@ -1,0 +1,109 @@
+/*
+ * دليل الألوان المخصص لموقع دروب اليمن
+ * Dark Blue: (10, 31, 74) - الهوية والخلفيات الداكنة
+ * Vibrant Orange: (255, 102, 0) - أزرار CTA
+ * Medium Blue: (0, 102, 204) - الأزرار الثانوية
+ * Dark Gray: (34, 34, 34) - نصوص القراءة
+ */
+
+/* ================================================= */
+/* متغيرات الألوان (Color Variables) لتسهيل التعديل */
+/* ================================================= */
+:root {
+    --color-navy: rgb(10, 31, 74);
+    --color-medium-blue: rgb(0, 102, 204);
+    --color-orange: rgb(255, 102, 0);
+    --color-dark-gray: rgb(34, 34, 34);
+    --color-success: rgb(76, 175, 80);
+    --color-error: rgb(220, 20, 60);
+    --color-white: #fff;
+}
+
+/* ================================================= */
+/* تنسيقات الهوية والألوان الأساسية */
+/* ================================================= */
+
+body {
+    font-family: 'Tajawal', sans-serif; /* يفضل استخدام خط عربي أنيق مثل تاجوال */
+    background-color: #f7f9fc; /* خلفية فاتحة جدًا لإبراز المحتوى */
+}
+
+/* شريط التنقل (Navbar) والتذييل (Footer) - الأزرق الداكن */
+.custom-navbar-dark, .custom-footer-dark {
+    background-color: var(--color-navy) !important;
+}
+
+/* خلفية الهيدر - اللون الأزرق الداكن */
+.custom-header-bg {
+    background: linear-gradient(135deg, var(--color-navy) 0%, rgb(18, 50, 110) 100%);
+    /* إضافة لمسة تدرج لزيادة الفخامة */
+}
+
+/* الألوان النصية */
+.custom-text-dark {
+    color: var(--color-dark-gray) !important;
+}
+
+.custom-text-gray {
+    color: #6c757d;
+}
+
+.custom-text-medium-blue {
+    color: var(--color-medium-blue) !important;
+}
+
+
+/* ================================================= */
+/* تنسيق الإجراء الرئيسي (CTA) - البرتقالي النابض */
+/* ================================================= */
+
+.custom-btn-cta {
+    background-color: var(--color-orange);
+    border-color: var(--color-orange);
+    color: var(--color-white);
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.custom-btn-cta:hover {
+    background-color: rgb(220, 90, 0); /* درجة أغمق للـ Hover */
+    border-color: rgb(220, 90, 0);
+    color: var(--color-white);
+}
+
+/* ================================================= */
+/* تنسيق نموذج البحث */
+/* ================================================= */
+
+/* بطاقة البحث (رفعها لأعلى) */
+.custom-search-card {
+    margin-top: -6rem; /* رفع البطاقة لتتداخل مع الهيدر بشكل أنيق */
+    border-radius: 12px;
+    background-color: var(--color-white);
+}
+
+/* تنسيق حقول الإدخال لتكون أكبر وأكثر وضوحا */
+.form-control-lg {
+    border-radius: 8px;
+    height: 3.2rem;
+}
+
+/* تأثير التظليل على البطاقات */
+.custom-card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-card-hover:hover {
+    transform: translateY(-5px); /* رفع بسيط عند المرور */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* تنسيق خاص لأيقونات الشريط العلوي */
+.navbar-nav .nav-link i {
+    font-size: 1.1em;
+}
+
+/* تأكد من أن الـ body يأخذ حشوة علوية لإظهار الـ fixed navbar */
+body {
+    padding-top: 56px; 
+}
